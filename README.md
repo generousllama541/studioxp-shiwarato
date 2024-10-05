@@ -1,1 +1,1 @@
-tout a commencer, Shiwarato le rat samurai au passe douloureux s'entraine pour empecher les forces ennemis de s'emparer du fromage sacree
+tout a commencer, Shiwarato le rat samurai au passe douloureux s'entraine pour empecher les forces ennemis de s'emparer du fromage sacree. tout a coup, une chauve-souris machiavelique bato arrive soudainement et defis shiwarato tres agile bato s'empare du fromage sacree. L'ordre du fromage s'est destabilisee, shiwarato poursuivi bato afin de l'affronter pour recuperer le fromage sacree et ainsi retablir l'ordre.
