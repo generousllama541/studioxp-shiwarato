@@ -29,11 +29,13 @@ public class PlayerMovement : MonoBehaviour
     private bool _isDashing;
 
     private Rigidbody2D _rigidbody2D;
+    private SpriteRenderer _spriteRenderer;
 
 
     private void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
 
     }
     private void Update()
@@ -65,6 +67,12 @@ public class PlayerMovement : MonoBehaviour
         }
 
         transform.position += movement * Time.deltaTime;
+
+
+        if (movementInput < 0f)
+            _spriteRenderer.flipX = true;
+        else if (movementInput > 0f)
+            _spriteRenderer.flipX = false;
 
 
     }
