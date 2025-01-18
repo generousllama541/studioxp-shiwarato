@@ -1,10 +1,17 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+#if UNITY_EDITOR
+using UnityEditor; // This is necessary for accessing Editor functionality
+#endif
 
 public class ClickToChangeScene : MonoBehaviour
 {
     [Tooltip("Drag the target scene here (file must be in the build settings)")]
     public Object targetScene; // Drag and drop the target scene here in the Inspector
+
+    [SerializeField]
+    [Tooltip("Check this box to quit the application on click instead of changing the scene.")]
+    private bool quitApplication = false; // Adds a checkbox in the Inspector
 
     private Collider2D objectCollider;
 
@@ -29,7 +36,14 @@ public class ClickToChangeScene : MonoBehaviour
             // If the ray hits this object
             if (hit.collider != null && hit.collider == objectCollider)
             {
-                ChangeScene();
+                if (quitApplication)
+                {
+                    QuitApplication();
+                }
+                else
+                {
+                    ChangeScene();
+                }
             }
         }
     }
@@ -44,5 +58,15 @@ public class ClickToChangeScene : MonoBehaviour
         {
             Debug.LogError("Target scene is not assigned!");
         }
+    }
+
+    private void QuitApplication()
+    {
+        Debug.Log("Quitting application.");
+#if UNITY_EDITOR
+        EditorApplication.isPlaying = false; // Stops play mode in the Editor
+#else
+        Application.Quit(); // Quits the application in a built version
+#endif
     }
 }
