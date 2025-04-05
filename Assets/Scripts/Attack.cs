@@ -30,7 +30,6 @@ public class Attack : MonoBehaviour
                 targetHealth.ApplyPoisonEffect();
             }
 
-
             Debug.Log("Attacked " + target.name + " for " + (isCriticalHit ? damage * 2 : damage) + " damage.");
         }
         else

@@ -88,7 +88,6 @@ public class Health : MonoBehaviour
     }
 
     // Method to apply poison status effect
-    // Method to apply poison status effect
     public void ApplyPoisonEffect()
     {
         if (enableStatusEffects)
@@ -97,7 +96,6 @@ public class Health : MonoBehaviour
             Debug.Log(gameObject.name + " is poisoned!");
         }
     }
-
 
     // Method to remove poison status effect
     public void RemovePoison()

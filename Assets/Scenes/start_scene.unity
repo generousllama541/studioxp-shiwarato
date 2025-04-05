@@ -421,6 +421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetScene: {fileID: 102900000, guid: fa61b7bcfaccaef47b4b56f507afeca2, type: 3}
+  quitApplication: 0
 --- !u!212 &660094198
 SpriteRenderer:
   m_ObjectHideFlags: 0
