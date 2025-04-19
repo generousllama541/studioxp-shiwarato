@@ -5,9 +5,6 @@ public class Health : MonoBehaviour
 {
     public float maxHealth = 100f;
     private float currentHealth;
-   [SerializeField] public GameObject healthBarPrefab;
-    private HealthBar healthBarInstance;
-
 
     public float CurrentHealth => currentHealth;
 
@@ -29,11 +26,6 @@ public class Health : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
-        {
-            GameObject bar = Instantiate(healthBarPrefab, FindObjectOfType<Canvas>().transform);
-            healthBarInstance = bar.GetComponent<HealthBar>();
-            healthBarInstance.targetHealth = this;
-        }
     }
 
     public void TakeDamage(float amount, bool isCriticalHit = false)
